@@ -17,8 +17,8 @@ class HostSecurity {
 
         try {
             $registeredDomain = Crypt::decryptString($encryptedDomain);
-//            $currentDomain = request()->getHost();
-            $currentDomain = "localhost:8000";
+            $currentDomain = request()->getHost();
+//            $currentDomain = "localhost:8000";
 
 
             return $this->compareDomains($registeredDomain, $currentDomain);
